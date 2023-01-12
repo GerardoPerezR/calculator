@@ -12,6 +12,8 @@ body    {
     background-color: gray;
     display: flex;
     flex-direction: column;
+ 
+ 
   
 }
 
@@ -20,12 +22,16 @@ body    {
       border-style: solid;
     border-color: red;
     grid-template-columns: repeat(4, 56px [column-start]);
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-bottom: 12px;
 }
 
 
 .button {
     height: 48px;
     width:  48px;
+    margin-top: 8px;
 }
 
 
@@ -34,4 +40,7 @@ body    {
     border-style: solid;
     border-color: red;
     margin: 8px;
+    padding: 4px;
+    display: flex;
+    justify-content: right;
 }
