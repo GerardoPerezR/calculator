@@ -1,0 +1,37 @@
+body    {
+
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.container  {
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+  
+}
+
+#buttons    {
+    display: grid;
+      border-style: solid;
+    border-color: red;
+    grid-template-columns: repeat(4, 56px [column-start]);
+}
+
+
+.button {
+    height: 48px;
+    width:  48px;
+}
+
+
+#screen {
+    color: blue;
+    border-style: solid;
+    border-color: red;
+    margin: 8px;
+}
