@@ -17,6 +17,7 @@ const buttonPlus = document.getElementById('plus');
 const buttonMinus = document.getElementById('minus');
 const buttonMultiply = document.getElementById('times');
 const buttonDivide = document.getElementById('dividedBy');
+const buttonAC = document.getElementById('AC');
 
 
 const buttonEquals = document.getElementById('equals');
@@ -40,6 +41,13 @@ buttonMinus.addEventListener('click', () => operatorButton('-'));
 buttonMultiply.addEventListener('click', () => operatorButton('*'));
 buttonDivide.addEventListener('click', () => operatorButton('/'));
 buttonEquals.addEventListener('click', () => equalsButton());
+buttonAC.addEventListener('click', () => allClearButton());
+
+function allClearButton()   {
+
+    displayValue = 0;
+    display.textContent = displayValue;
+}
 
 
 function operatorButton(op)       {
@@ -89,6 +97,11 @@ function displayNumber(num)    {
     displayValue = (displayValue * 10) + num;
     console.log(displayValue)
     display.textContent = displayValue;
+}
+
+function back() {
+    //divide by 10
+    //round to int
 }
  
 
