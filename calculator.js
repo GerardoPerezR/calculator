@@ -166,7 +166,7 @@ function operate(operand1, operand2, operator)  {
     else if (operator ===  '/') {
         
          console.log('operator is' + operator);
-        result = (operand1 / operand2).toPrecision() ;
+        result = (operand1 / operand2).toPrecision(12) ;
        
        
     }
