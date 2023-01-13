@@ -124,7 +124,7 @@ function numberButton(num)  {
 function displayNumber(num)    {
 
    // console.log('calling  displayNumber function');
-    displayValue = (((displayValue * 10) + num/x)/n).toPrecision(y);
+    displayValue = (((displayValue * 10) + num/x)/n);
     console.log(displayValue)
     display.textContent = displayValue;
     if (n>1){x = x*10;} ;
