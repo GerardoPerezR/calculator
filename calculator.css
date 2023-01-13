@@ -12,6 +12,7 @@ body    {
     background-color: gray;
     display: flex;
     flex-direction: column;
+    border-radius: 1%;
  
  
   
@@ -19,28 +20,35 @@ body    {
 
 #buttons    {
     display: grid;
-      border-style: solid;
-    border-color: red;
-    grid-template-columns: repeat(4, 56px [column-start]);
+ border-style: solid;
+    border-color:gray; 
+    grid-template-columns: repeat(4, 82px [column-start]);
     margin-left: 12px;
     margin-right: 12px;
     margin-bottom: 12px;
+  
 }
 
 
 .button {
-    height: 48px;
-    width:  48px;
+    height:72px;
+    width:  72px;
     margin-top: 8px;
+      border-radius: 10%;
+  
 }
 
 
 #screen {
     color: blue;
-    border-style: solid;
+    border-style: solid ;
+    border-width: 1px;
     border-color: red;
-    margin: 8px;
+    margin: 12px;
     padding: 4px;
     display: flex;
     justify-content: right;
+    align-items: center;
+    height: 72px;
+    font-size: 48px;
 }
