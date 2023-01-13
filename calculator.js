@@ -6,6 +6,7 @@ var operand1 = 0;
 var operand2;
 var n =1;
 var x =1;
+var y=1;
 
 var firstTime;
 
@@ -84,6 +85,7 @@ function operatorButton(op)       {
     oldOperator = op;
     n = 1;
     x = 1;
+    y=1;
     //operand2 = 0;
   }
 
@@ -122,10 +124,12 @@ function numberButton(num)  {
 function displayNumber(num)    {
 
    // console.log('calling  displayNumber function');
-    displayValue = ((displayValue * 10) + num/x)/n;
+    displayValue = (((displayValue * 10) + num/x)/n).toPrecision(y);
     console.log(displayValue)
     display.textContent = displayValue;
-    if (n>1){x = x*10;} 
+    if (n>1){x = x*10;} ;
+    y ++;
+
     
    
 }
