@@ -102,6 +102,8 @@ function equalsButton() {
     operand2 = displayValue;
     console.log('operand2 is' + operand2)
     operate(operand1, operand2, operator);
+    firstTime = undefined;
+    operand1 = displayValue;
 }
 
 function numberButton(num)  {
@@ -137,7 +139,7 @@ function operate(operand1, operand2, operator)  {
     }
     else if (operator === '-')  {
         console.log('operator is' + operator);
-        result = 'resultado de la resta';
+        
         result = operand1 - operand2;
     }
 
@@ -152,8 +154,13 @@ function operate(operand1, operand2, operator)  {
 
     
     console.log('result' + result);
+   
     displayValue = result;
     display.textContent = displayValue;
+    operand1 = result;
+    operand2 = null;
+     console.log('operand1' + operand1);
+    console.log('operand2' + operand2);
     return result
 
 
