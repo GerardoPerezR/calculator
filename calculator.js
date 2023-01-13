@@ -18,6 +18,7 @@ const buttonMinus = document.getElementById('minus');
 const buttonMultiply = document.getElementById('times');
 const buttonDivide = document.getElementById('dividedBy');
 const buttonAC = document.getElementById('AC');
+const buttonBack = document.getElementById('back');
 
 
 const buttonEquals = document.getElementById('equals');
@@ -42,6 +43,7 @@ buttonMultiply.addEventListener('click', () => operatorButton('*'));
 buttonDivide.addEventListener('click', () => operatorButton('/'));
 buttonEquals.addEventListener('click', () => equalsButton());
 buttonAC.addEventListener('click', () => allClearButton());
+buttonBack.addEventListener('click', () => backButton());
 
 function allClearButton()   {
 
@@ -99,9 +101,11 @@ function displayNumber(num)    {
     display.textContent = displayValue;
 }
 
-function back() {
+function backButton() {
+    displayValue = Math.floor(displayValue/10);
     //divide by 10
     //round to int
+    display.textContent = displayValue;
 }
  
 
