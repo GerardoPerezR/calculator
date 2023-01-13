@@ -29,10 +29,20 @@ body    {
   
 }
 
+#ten {
+    grid-column-start:  1;
+    grid-column-end: 3;
+}
+
+#AC {
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
 
 .button {
     height:72px;
-    width:  72px;
+    width:  auto;
     margin-top: 8px;
       border-radius: 10%;
   

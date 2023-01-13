@@ -19,7 +19,7 @@ const button6 = document.getElementById('6');
 const button7 = document.getElementById('7');
 const button8 = document.getElementById('8');
 const button9 = document.getElementById('9');
-const button0 = document.getElementById("0");
+const button0 = document.getElementById("ten");
 const buttonPlus = document.getElementById('plus');
 const buttonMinus = document.getElementById('minus');
 const buttonMultiply = document.getElementById('times');
@@ -54,6 +54,7 @@ buttonEquals.addEventListener('click', () => equalsButton());
 buttonAC.addEventListener('click', () => allClearButton());
 buttonBack.addEventListener('click', () => backButton());
 buttonDot.addEventListener('click', () => { n = 10});
+
 function allClearButton()   {
 
     var operand1 = undefined;
@@ -145,6 +146,7 @@ function backButton() {
 
 
 function operate(operand1, operand2, operator)  {
+    
 
     if (operator === '+')   {
         console.log('operator is' + operator);
@@ -162,15 +164,19 @@ function operate(operand1, operand2, operator)  {
         result = operand1 * operand2;
     }
     else if (operator ===  '/') {
-        console.log('operator is' + operator);
+        
+         console.log('operator is' + operator);
         result = (operand1 / operand2).toPrecision() ;
+       
+       
     }
 
     
     console.log('result' + result);
    
     displayValue = result;
-    display.textContent = displayValue;
+    display.textContent = displayValue; 
+    if (result == Infinity )    {display.textContent = "Don't be an idiot"}
     operand1 = result;
     operand2 = null;
      console.log('operand1' + operand1);
