@@ -4,6 +4,8 @@ var operator;
 var result = 0;
 var operand1 = 0;
 var operand2;
+var n =1;
+var x =1;
 
 var firstTime;
 
@@ -23,6 +25,8 @@ const buttonMultiply = document.getElementById('times');
 const buttonDivide = document.getElementById('dividedBy');
 const buttonAC = document.getElementById('AC');
 const buttonBack = document.getElementById('back');
+const buttonDot = document.getElementById('dot');
+
 
 
 const buttonEquals = document.getElementById('equals');
@@ -48,7 +52,7 @@ buttonDivide.addEventListener('click', () => operatorButton('/'));
 buttonEquals.addEventListener('click', () => equalsButton());
 buttonAC.addEventListener('click', () => allClearButton());
 buttonBack.addEventListener('click', () => backButton());
-
+buttonDot.addEventListener('click', () => { n = 10});
 function allClearButton()   {
 
     var operand1 = undefined;
@@ -78,6 +82,8 @@ function operatorButton(op)       {
     displayValue = 0;
     firstTime = 1;
     oldOperator = op;
+    n = 1;
+    x = 1;
     //operand2 = 0;
   }
 
@@ -110,14 +116,18 @@ function numberButton(num)  {
    // displayValue = num
     
     displayNumber(num)
+    //n = n/10;
 }
 
 function displayNumber(num)    {
 
    // console.log('calling  displayNumber function');
-    displayValue = (displayValue * 10) + num;
+    displayValue = ((displayValue * 10) + num/x)/n;
     console.log(displayValue)
     display.textContent = displayValue;
+    if (n>1){x = x*10;} 
+    
+   
 }
 
 function backButton() {
