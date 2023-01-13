@@ -2,6 +2,10 @@
 var displayValue = 0;
 var operator;
 var result = 0;
+var operand1 = 0;
+var operand2;
+
+var firstTime;
 
 const button1 = document.getElementById("1");
 const button2 = document.getElementById('2');
@@ -47,39 +51,52 @@ buttonBack.addEventListener('click', () => backButton());
 
 function allClearButton()   {
 
+    var operand1 = undefined;
+    var operand2 = undefined;
+    var operator;
+    var result = 0;
+    console.log(result, operand1, operand2);
     displayValue = 0;
     display.textContent = displayValue;
 }
 
 
 function operatorButton(op)       {
-    operator = op; 
-    console.log(operator);
+
+   operator = op; 
+  if (typeof(firstTime) === "undefined" )  {
+
+  
+
+
+ 
+    console.log(operator + typeof(operand2));
     operand1 = displayValue;
     console.log("operand 1 is" + operand1);
+    console.log("operand 2 is"  + operand2)
     display.textContent = operator;
     displayValue = 0;
+    firstTime = 1;
+    oldOperator = op;
+    //operand2 = 0;
+  }
 
+  else {
+    operand2 = displayValue;
 
-}
+    operand1 = operate(operand1, operand2, oldOperator);
 
-
-
-function minusButton()      {
-    operator = '-'; console.log(operator)
-
-
-}
-
-function multiplyButton()   {
-    operator = '*'; console.log(operator)
-
-}
-
-function divideButton()     {
-    operator = '/'; console.log(operator)
+    console.log('operand1 is now '  + operand1);
+    console.log('operand2 is now '  + operand2);
+    displayValue = 0;
+    display.textContent = operand1 + operator
+    oldOperator = op;
+  }
 
 }
+
+
+
 
 function equalsButton() {
     operand2 = displayValue;
@@ -95,7 +112,7 @@ function numberButton(num)  {
 
 function displayNumber(num)    {
 
-    console.log('calling  displayNumber function');
+   // console.log('calling  displayNumber function');
     displayValue = (displayValue * 10) + num;
     console.log(displayValue)
     display.textContent = displayValue;
